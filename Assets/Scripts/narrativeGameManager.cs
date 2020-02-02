@@ -7,57 +7,58 @@ public class narrativeGameManager : MonoBehaviour
     public narrativeVRAudioManager audioManager;
     public narrativeLightingManager lightingManager;
 
-    void Start()
-    {
-        
-    }
+    public PIctureHolderController pIctureHolder;
 
-    void Update()
-    {
-        
-    }
+    // void Start()
+    // {
+    // }
+
+    // void Update()
+    // {
+    // }
 
     public void OnFireplaceLit()
     {
-        //play first audio
         audioManager.PlayAfterCandleLightAudio();
         //make pieces appear and glow
     }
 
     public void OnPictureComplete()
     {
-        //play second audio
-        // picture placeholder starts growing 
+        audioManager.PlayAfterPutPictureTogetherAudio();
+        pIctureHolder.StartGlowing();
+
     }
 
     public void OnPicturePutInPlaceholder()
     {
         //drum pieces appear
-        //lights in corner 1 appear
+        lightingManager.TurnOnFirstCornerLights();
     }
 
     public void OnDrumPutTogether()
     {
-        //play audio 3
+        audioManager.PlayAfterPutDrumTogetherAudio();
         //highlight drum holder
     }
 
     public void OnPutDrumInPlaceHolder()
     {
-        //lights in corner 2 of 3 appear
+        lightingManager.TurnOnSecondCornerLights();
         //paint brush pieces appear
     }
 
     public void OnPaintBrushPutTogether()
     {
-        //audio plays
-        //picture changes its image to the full version 
-        //picture starts glowing
+        audioManager.PlayAfterPutPaintBrushTogetherAudio();
+        pIctureHolder.StartGlowing();
+        pIctureHolder.ChangePhotoToFull();
     }
 
     public void OnPlayerNearPicture()
     {
-        //play audio 
+        lightingManager.TurnOnThirdCornerLights();
+        audioManager.PlayAfterSeeFullPhotoAudio();
         //wait for audio to finish
         //fade to black/credits
     }
