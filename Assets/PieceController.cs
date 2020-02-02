@@ -11,7 +11,7 @@ public class PieceController : MonoBehaviour
     GameObject localPiece1;
     GameObject localPiece2;
 
-    public delegate void OnActive();
+    public bool isPicture;
     narrativeGameManager nGameManager;
     int peacesGather = 0;
     // Start is called before the first frame update
@@ -89,7 +89,10 @@ public class PieceController : MonoBehaviour
             if (otherPeaces + peacesGather == 2)
             {
                 localPiece2.SetActive(true);
-                // nGameManager.OnPictureComplete();
+                if (isPicture)
+                    nGameManager.OnPictureComplete();
+                else
+                    nGameManager.OnDrumPutTogether();
             }
             // check if piece has selected other thing
 
@@ -111,7 +114,10 @@ public class PieceController : MonoBehaviour
             if (otherPeaces + peacesGather == 2)
             {
                 localPiece1.SetActive(true);
-                // nGameManager.OnPictureComplete();
+                if (isPicture)
+                    nGameManager.OnPictureComplete();
+                else
+                    nGameManager.OnDrumPutTogether();
             }
             /*
             piece2.GetComponentInParent<Transform>().gameObject.SetActive(false);
