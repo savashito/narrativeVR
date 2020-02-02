@@ -15,9 +15,10 @@ public class FireController : MonoBehaviour
         flameSoundSource = GetComponent<AudioSource>();
     }
 
-    private void OnTriggerEnter(Collision collision)
+    private void OnTriggerEnter(Collider collider)
     {
-        if(collision.gameObject.tag == "candle")
+            // StartFlame();
+        if(collider.gameObject.tag == "candle")
         {
             gameManager.OnFireplaceLit();
             StartFlame();
