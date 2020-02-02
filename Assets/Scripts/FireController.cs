@@ -15,7 +15,7 @@ public class FireController : MonoBehaviour
         flameSoundSource = GetComponent<AudioSource>();
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collision collision)
     {
         if(collision.gameObject.tag == "candle")
         {
