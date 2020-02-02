@@ -11,6 +11,7 @@ public class PieceController : MonoBehaviour
     GameObject localPiece1;
     GameObject localPiece2;
 
+    public delegate void OnActive();
     narrativeGameManager nGameManager;
     // Start is called before the first frame update
     void Start()
@@ -79,7 +80,10 @@ public class PieceController : MonoBehaviour
         if (Collition(piece1))
         {
             localPiece1.SetActive(true);
-            piece1.SetActive(false);
+            piece1.GetComponentInParent<Transform>().gameObject.SetActive(false);
+
+            // piece1.SetActive(false);
+
             if (!piece2.activeInHierarchy) {
                 // nGameManager.OnPictureComplete();
             }
@@ -87,7 +91,8 @@ public class PieceController : MonoBehaviour
         if (Collition(piece2))
         {
             localPiece2.SetActive(true);
-            piece2.SetActive(false);
+            piece2.GetComponentInParent<Transform>().gameObject.SetActive(false);
+            // piece2.SetActive(false);
             if (!piece1.activeInHierarchy)
             {
                 // nGameManager.OnPictureComplete();
@@ -104,6 +109,7 @@ public class PieceController : MonoBehaviour
 
         float dist = Vector3.Distance(t1.position, t2.position);
         print("Distance to other: " + dist + "\t" + t1.position + "\t" + transform.position);
+        return dist < 0.05;
         return dist < 0.04;
     }
     // Transform t1 = 
