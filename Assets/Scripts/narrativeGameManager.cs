@@ -7,9 +7,11 @@ public class narrativeGameManager : MonoBehaviour
     public narrativeVRAudioManager audioManager;
     public narrativeLightingManager lightingManager;
 
+    public PIctureHolderController pIctureHolder;
+
     void Start()
     {
-        
+
     }
 
     void Update()
@@ -27,12 +29,14 @@ public class narrativeGameManager : MonoBehaviour
     public void OnPictureComplete()
     {
         //play second audio
-        // picture placeholder starts growing 
+        pIctureHolder.StartGlowing();
+
     }
 
     public void OnPicturePutInPlaceholder()
     {
         //drum pieces appear
+        lightingManager.TurnOnFirstCornerLights();
         //lights in corner 1 appear
     }
 
@@ -45,6 +49,7 @@ public class narrativeGameManager : MonoBehaviour
     public void OnPutDrumInPlaceHolder()
     {
         //lights in corner 2 of 3 appear
+        lightingManager.TurnOnSecondCornerLights();
         //paint brush pieces appear
     }
 
@@ -57,6 +62,7 @@ public class narrativeGameManager : MonoBehaviour
 
     public void OnPlayerNearPicture()
     {
+        lightingManager.TurnOnThirdCornerLights();
         //play audio 
         //wait for audio to finish
         //fade to black/credits

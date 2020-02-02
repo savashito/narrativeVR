@@ -15,4 +15,19 @@ public class narrativeLightingManager : MonoBehaviour
     {
         
     }
+
+    public void TurnOnFirstCornerLights()
+    {
+        
+    }
+    
+    public void TurnOnSecondCornerLights()
+    {
+
+    }
+
+    public void TurnOnThirdCornerLights()
+    {
+
+    }
 }
