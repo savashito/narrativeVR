@@ -8,6 +8,10 @@ public class narrativeGameManager : MonoBehaviour
     public narrativeLightingManager lightingManager;
 
     public PIctureHolderController pIctureHolder;
+    public GameObject picturePiecesParent;
+
+    public GameObject drums;
+    
 
     // void Start()
     // {
@@ -20,6 +24,7 @@ public class narrativeGameManager : MonoBehaviour
     public void OnFireplaceLit()
     {
         audioManager.PlayAfterCandleLightAudio();
+        picturePiecesParent.SetActive(true);
         //make pieces appear and glow
     }
 
@@ -31,7 +36,7 @@ public class narrativeGameManager : MonoBehaviour
 
     public void OnPicturePutInPlaceholder()
     {
-        //drum pieces appear
+        drums.SetActive(true);
         lightingManager.TurnOnFirstCornerLights();
     }
 
