@@ -13,6 +13,7 @@ public class PieceController : MonoBehaviour
 
     public delegate void OnActive();
     narrativeGameManager nGameManager;
+    int peacesGather = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -77,27 +78,49 @@ public class PieceController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Collition(piece1))
+        if (piece1.activeInHierarchy && Collition(piece1))
         {
             localPiece1.SetActive(true);
             piece1.GetComponentInParent<Transform>().gameObject.SetActive(false);
+            int otherPeaces = piece1.GetComponent<PieceController>().peacesGather;
+            Debug.Log("other " + otherPeaces);
+            peacesGather++;
+            Debug.Log("their " + peacesGather);
+            if (otherPeaces + peacesGather == 2)
+            {
+                localPiece2.SetActive(true);
+                // nGameManager.OnPictureComplete();
+            }
+            // check if piece has selected other thing
 
             // piece1.SetActive(false);
 
-            if (!piece2.activeInHierarchy) {
-                // nGameManager.OnPictureComplete();
-            }
+            //if (!piece2.activeInHierarchy) {
+            //    // nGameManager.OnPictureComplete();
+            //}
         }
-        if (Collition(piece2))
+        
+        if (piece1.activeInHierarchy && Collition(piece2))
         {
             localPiece2.SetActive(true);
+            piece2.GetComponentInParent<Transform>().gameObject.SetActive(false);
+            int otherPeaces = piece2.GetComponent<PieceController>().peacesGather;
+            Debug.Log("other " + otherPeaces);
+            peacesGather++;
+            Debug.Log("their " + peacesGather);
+            if (otherPeaces + peacesGather == 2)
+            {
+                localPiece1.SetActive(true);
+                // nGameManager.OnPictureComplete();
+            }
+            /*
             piece2.GetComponentInParent<Transform>().gameObject.SetActive(false);
             // piece2.SetActive(false);
             if (!piece1.activeInHierarchy)
             {
                 // nGameManager.OnPictureComplete();
             }
-
+            */
         }
     }
 
@@ -108,9 +131,9 @@ public class PieceController : MonoBehaviour
         Transform t2 = GetComponentInParent<Transform>();
 
         float dist = Vector3.Distance(t1.position, t2.position);
-        print("Distance to other: " + dist + "\t" + t1.position + "\t" + transform.position);
+        // print("Distance to other: " + dist + "\t" + t1.position + "\t" + transform.position);
         return dist < 0.05;
-        return dist < 0.04;
+        // return dist < 0.04;
     }
     // Transform t1 = 
 }
