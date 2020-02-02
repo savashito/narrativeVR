@@ -132,6 +132,7 @@ public class PieceController : MonoBehaviour
 
     bool Collition(GameObject other)
     {
+        Debug.Log("Collition " + other.name);
         Transform t1 = other.GetComponentInParent<Transform>();
         // Transform t1 = other.GetComponent<Transform>();
         Transform t2 = GetComponentInParent<Transform>();
@@ -142,4 +143,12 @@ public class PieceController : MonoBehaviour
         // return dist < 0.04;
     }
     // Transform t1 = 
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.name == "pictureHolder")
+        {
+            this.gameObject.SetActive(false);
+        }
+    }
 }

@@ -23,14 +23,17 @@ public class PIctureHolderController : MonoBehaviour
 
     public void StartGlowing()
     {
-        completePictureErased.SetActive(true);
+        Debug.Log("StartGlowing!!!!");
         glowingFrame.SetActive(true);
     }
 
     private void OnTriggerEnter( Collider collider)
     {
-        if(collider.gameObject.tag == "picture")
+        Debug.Log("col " + collider.gameObject.name);
+        if (collider.gameObject.tag == "picture")
         {
+            collider.gameObject.SetActive(false);
+            completePictureErased.SetActive(true);
             //play a completion audio?
             glowingFrame.SetActive(false);
             gameManager.OnPicturePutInPlaceholder();
