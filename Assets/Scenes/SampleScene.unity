@@ -2287,6 +2287,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1036737027}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1036737029 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1569392064340664810, guid: ba5db34b6170b4d339a28934181c5f71,
+    type: 3}
+  m_PrefabInstance: {fileID: 1036737027}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 209d2b82b50ce4195b688ff2735a67b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1040429554
 GameObject:
   m_ObjectHideFlags: 0
@@ -3451,6 +3463,11 @@ PrefabInstance:
       propertyPath: lightingManager
       value: 
       objectReference: {fileID: 1013781280}
+    - target: {fileID: 8910244861622556594, guid: 6c0435febfc69462ea8636ecd3d390ce,
+        type: 3}
+      propertyPath: pIctureHolder
+      value: 
+      objectReference: {fileID: 1036737029}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c0435febfc69462ea8636ecd3d390ce, type: 3}
 --- !u!1 &1985363851

@@ -9,15 +9,13 @@ public class narrativeGameManager : MonoBehaviour
 
     public PIctureHolderController pIctureHolder;
 
-    void Start()
-    {
+    // void Start()
+    // {
+    // }
 
-    }
-
-    void Update()
-    {
-        
-    }
+    // void Update()
+    // {
+    // }
 
     public void OnFireplaceLit()
     {
@@ -27,7 +25,6 @@ public class narrativeGameManager : MonoBehaviour
 
     public void OnPictureComplete()
     {
-        //play second audio
         audioManager.PlayAfterPutPictureTogetherAudio();
         pIctureHolder.StartGlowing();
 
