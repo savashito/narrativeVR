@@ -1592,11 +1592,11 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 692917990}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.08, y: 0.23, z: 0.08}
-  m_Center: {x: 0, y: -0.04, z: 0}
+  m_Size: {x: 0.08, y: 0.22826093, z: 0.043480158}
+  m_Center: {x: 0, y: -0.027826756, z: -0.0017390251}
 --- !u!23 &692917994
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1865,11 +1865,11 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6398851640534098599}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.27, y: 0.9, z: 1.22}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 3.6081433, y: 1.326456, z: 1.7019011}
+  m_Center: {x: 0.16907156, y: 0.21322787, z: -0.24095051}
 --- !u!1 &904048124
 GameObject:
   m_ObjectHideFlags: 0
@@ -14466,13 +14466,27 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8186624559571053273}
+  - component: {fileID: 5172351673647913163}
   m_Layer: 0
   m_Name: Candle
-  m_TagString: Untagged
+  m_TagString: candle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &5172351673647913163
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5172351673647913162}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.13379091, y: 0.34733486, z: 0.13391936}
+  m_Center: {x: -0.004274726, y: 0.010549545, z: -0.0005645156}
 --- !u!1 &5374346862563588093
 GameObject:
   m_ObjectHideFlags: 0
