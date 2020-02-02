@@ -17,10 +17,11 @@ public class FireController : MonoBehaviour
 
     private void OnTriggerEnter(Collider collider)
     {
-        Debug.LogError("OnTrigger ENTER!!!!");
+        // Debug.LogError("OnTrigger ENTER!!!!");
             // StartFlame();
         if(collider.gameObject.tag == "candle")
         {
+            Debug.Log("Hit candle!!!");
             gameManager.OnFireplaceLit();
             StartFlame();
         }
