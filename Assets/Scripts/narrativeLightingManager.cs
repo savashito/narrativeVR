@@ -12,6 +12,10 @@ public class narrativeLightingManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        light1.SetActive(false);
+        light2.SetActive(false);
+        light3.SetActive(false);
+        light4.SetActive(false);
     }
 
     // Update is called once per frame
