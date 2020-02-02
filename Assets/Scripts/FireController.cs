@@ -17,6 +17,7 @@ public class FireController : MonoBehaviour
 
     private void OnTriggerEnter(Collider collider)
     {
+        Debug.LogError("OnTrigger ENTER!!!!");
             // StartFlame();
         if(collider.gameObject.tag == "candle")
         {

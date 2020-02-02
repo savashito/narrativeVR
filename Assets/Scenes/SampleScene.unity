@@ -1611,7 +1611,7 @@ GameObject:
   - component: {fileID: 692917991}
   m_Layer: 0
   m_Name: Candle
-  m_TagString: Untagged
+  m_TagString: candle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14716,7 +14716,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8186624559571053273}
-  - component: {fileID: 5172351673647913163}
   m_Layer: 0
   m_Name: Candle
   m_TagString: candle
@@ -14724,19 +14723,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!65 &5172351673647913163
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5172351673647913162}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.13379091, y: 0.34733486, z: 0.13391936}
-  m_Center: {x: -0.004274726, y: 0.010549545, z: -0.0005645156}
 --- !u!1 &5374346862563588093
 GameObject:
   m_ObjectHideFlags: 0
@@ -15233,7 +15219,6 @@ GameObject:
   - component: {fileID: 6398851640534098593}
   - component: {fileID: 6398851640534098594}
   - component: {fileID: 762752726}
-  - component: {fileID: 6398851640534098600}
   m_Layer: 0
   m_Name: Fireplace
   m_TagString: Untagged
@@ -15241,22 +15226,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!54 &6398851640534098600
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6398851640534098599}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!4 &6398851640559980384
 Transform:
   m_ObjectHideFlags: 0
