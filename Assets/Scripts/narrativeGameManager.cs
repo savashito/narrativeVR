@@ -20,6 +20,7 @@ public class narrativeGameManager : MonoBehaviour
     public void OnFireplaceLit()
     {
         //play first audio
+        audioManager.PlayAfterCandleLightAudio();
         //make pieces appear and glow
     }
 
