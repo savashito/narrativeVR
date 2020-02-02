@@ -27,7 +27,6 @@ public class narrativeGameManager : MonoBehaviour
     {
         audioManager.PlayAfterPutPictureTogetherAudio();
         pIctureHolder.StartGlowing();
-
     }
 
     public void OnPicturePutInPlaceholder()

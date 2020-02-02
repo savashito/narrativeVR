@@ -23,6 +23,7 @@ public class PieceController : MonoBehaviour
         localPiece1 = transform.Find("a").gameObject;
         // Debug.Log("start111 " + localPiece1);
         localPiece2 = transform.Find("b").gameObject;
+        nGameManager = GameObject.Find("NarrativeGameManager").GetComponent<narrativeGameManager>();
         //
         piece1 = GameObject.Find(GetPiezeName(name, 0));
         piece2 = GameObject.Find(GetPiezeName(name, 1));
