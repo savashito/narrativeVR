@@ -20,8 +20,9 @@ public class Piezas : MonoBehaviour
             Collider caja = padre.GetComponent<Collider>();
 
             pieza.transform.position = pieza.transform.position - distancia + caja.bounds.size; */
-            DragObject script = pieza.GetComponent<DragObject>();
-            Destroy(script);
+
+            //DragObject script = pieza.GetComponent<DragObject>();
+            //Destroy(script);
             Base comportamiento = padre.GetComponent<Base>();
             comportamiento.AñadirPieza();
             Destroy(this);
