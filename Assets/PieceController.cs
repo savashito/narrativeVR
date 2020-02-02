@@ -10,6 +10,8 @@ public class PieceController : MonoBehaviour
 
     GameObject localPiece1;
     GameObject localPiece2;
+
+    narrativeGameManager nGameManager;
     // Start is called before the first frame update
     void Start()
     {
@@ -77,11 +79,19 @@ public class PieceController : MonoBehaviour
         {
             localPiece1.SetActive(true);
             piece1.SetActive(false);
+            if (!piece2.activeInHierarchy) {
+                nGameManager.OnPictureComplete();
+            }
         }
         if (Collition(piece2))
         {
             localPiece2.SetActive(true);
             piece2.SetActive(false);
+            if (!piece1.activeInHierarchy)
+            {
+                nGameManager.OnPictureComplete();
+            }
+
         }
     }
 
