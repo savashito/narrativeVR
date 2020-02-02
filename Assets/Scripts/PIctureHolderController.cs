@@ -8,17 +8,22 @@ public class PIctureHolderController : MonoBehaviour
     public narrativeGameManager gameManager;
 
     public GameObject glowingFrame;
-    public GameObject completePicture;
+    public GameObject completePictureErased;
+    public GameObject completePictureFull;
+
+    public bool isSecondStage;
 
     void Start()
     {
+        isSecondStage = false;
         glowingFrame.SetActive(false);
-        completePicture.SetActive(false);
+        completePictureErased.SetActive(false);
+        completePictureFull.SetActive(false);
     }
 
     public void StartGlowing()
     {
-        completePicture.SetActive(true);
+        completePictureErased.SetActive(true);
         glowingFrame.SetActive(true);
     }
 
@@ -31,6 +36,12 @@ public class PIctureHolderController : MonoBehaviour
             gameManager.OnPicturePutInPlaceholder();
         }
 
+    }
+
+    public void ChangePhotoToFull()
+    {
+        completePictureErased.SetActive(false);
+        completePictureFull.SetActive(true);
     }
 
 }

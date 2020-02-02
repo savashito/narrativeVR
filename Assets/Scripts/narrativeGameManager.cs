@@ -21,7 +21,6 @@ public class narrativeGameManager : MonoBehaviour
 
     public void OnFireplaceLit()
     {
-        //play first audio
         audioManager.PlayAfterCandleLightAudio();
         //make pieces appear and glow
     }
@@ -29,6 +28,7 @@ public class narrativeGameManager : MonoBehaviour
     public void OnPictureComplete()
     {
         //play second audio
+        audioManager.PlayAfterPutPictureTogetherAudio();
         pIctureHolder.StartGlowing();
 
     }
@@ -37,33 +37,31 @@ public class narrativeGameManager : MonoBehaviour
     {
         //drum pieces appear
         lightingManager.TurnOnFirstCornerLights();
-        //lights in corner 1 appear
     }
 
     public void OnDrumPutTogether()
     {
-        //play audio 3
+        audioManager.PlayAfterPutDrumTogetherAudio();
         //highlight drum holder
     }
 
     public void OnPutDrumInPlaceHolder()
     {
-        //lights in corner 2 of 3 appear
         lightingManager.TurnOnSecondCornerLights();
         //paint brush pieces appear
     }
 
     public void OnPaintBrushPutTogether()
     {
-        //audio plays
-        //picture changes its image to the full version 
-        //picture starts glowing
+        audioManager.PlayAfterPutPaintBrushTogetherAudio();
+        pIctureHolder.StartGlowing();
+        pIctureHolder.ChangePhotoToFull();
     }
 
     public void OnPlayerNearPicture()
     {
         lightingManager.TurnOnThirdCornerLights();
-        //play audio 
+        audioManager.PlayAfterSeeFullPhotoAudio();
         //wait for audio to finish
         //fade to black/credits
     }
